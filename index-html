@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natsumi Mitarashi Fan Site 🌸🫖</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #fffaf0;
+            color: #333;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #d87093;
+        }
+        .card {
+            background: white;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🌸 Natsumi Mitarashi Fan Site 🫖</h1>
+        <p>TikTok Creator Natsumi Mitarashi の非公式ファンコミュニティサイトへようこそ！</p>
+        <p>配信の感想や応援メッセージをシェアしていこう！</p>
+    </div>
+</body>
+</html>
