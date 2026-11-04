@@ -1,35 +1,336 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natsumi Mitarashi Fan Site 🌸🍡🫖</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #fffaf0;
-            color: #333;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        h1 {
-            color: #d87093;
-        }
-        .card {
-            background: white;
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#49372f">
+<title>みたらしなつみ｜公式ファンサイト</title>
+<meta name="description" content="みたらしなつみの公式ファンサイト。ここは、なつみとみんながつながる場所。">
+<style>
+:root {
+  --brown: #49372f;
+  --deep: #30231e;
+  --mocha: #70574a;
+  --gold: #b99a76;
+  --cream: #f1e7da;
+  --beige: #e6d7c6;
+  --text: #49372f;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
+  line-height: 1.9;
+  letter-spacing: .06em;
+}
+a { color: inherit; text-decoration: none; }
+header {
+  background: var(--deep);
+  color: #f5eadd;
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(213,183,148,.3);
+}
+.logo {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  letter-spacing: .13em;
+  white-space: nowrap;
+}
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: 11px;
+  color: #e4d2c0;
+}
+nav a:hover { color: #d5b794; }
+.hero {
+  min-height: 590px;
+  padding: 85px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f8eee2;
+  background:
+    radial-gradient(ellipse at 50% 35%, #806555 0%, transparent 55%),
+    linear-gradient(145deg, #574238, #30231e 75%);
+  position: relative;
+  overflow: hidden;
+}
+.hero:before, .hero:after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(220,190,155,.18);
+  border-radius: 50%;
+}
+.hero:before { top: -100px; left: -90px; }
+.hero:after { bottom: -130px; right: -80px; }
+.hero-inner { position: relative; z-index: 1; }
+.eyebrow {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: .3em;
+  color: #d8b995;
+}
+.emblem {
+  font-size: 37px;
+  margin: 25px 0 12px;
+}
+.hero h1 {
+  font-family: Georgia, "Yu Mincho", serif;
+  font-weight: 400;
+  font-size: clamp(29px, 7vw, 48px);
+  letter-spacing: .13em;
+  margin: 0;
+}
+.hero .subtitle {
+  color: #ddc8b2;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  letter-spacing: .25em;
+  margin-top: 12px;
+}
+.hero .welcome {
+  margin: 38px 0 8px;
+  font-family: "Yu Mincho", serif;
+  font-size: 23px;
+  letter-spacing: .16em;
+}
+.hero .intro {
+  font-size: 13px;
+  color: #e5d5c5;
+}
+.gold-line {
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 24px auto;
+}
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 11px 28px;
+  border: 1px solid #c6a984;
+  color: #f5eadd;
+  font-size: 12px;
+  letter-spacing: .12em;
+  transition: .25s;
+}
+.button:hover {
+  background: #c6a984;
+  color: #30231e;
+}
+section { padding: 78px 22px; }
+.section-inner {
+  max-width: 850px;
+  margin: auto;
+}
+.section-label {
+  text-align: center;
+  color: #a48668;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: .25em;
+}
+h2 {
+  text-align: center;
+  font-family: "Yu Mincho", serif;
+  font-weight: 400;
+  font-size: 27px;
+  letter-spacing: .15em;
+  margin: 5px 0 30px;
+}
+.section-copy {
+  text-align: center;
+  font-size: 14px;
+  line-height: 2.3;
+  max-width: 620px;
+  margin: auto;
+}
+.about {
+  background: #eee3d6;
+}
+.about-panel {
+  margin: 35px auto 0;
+  max-width: 650px;
+  padding: 30px 25px;
+  border: 1px solid #d4c1ac;
+  text-align: center;
+  background: rgba(255,255,255,.18);
+}
+.about-panel p { margin: 0; font-size: 13px; }
+.live {
+  background: #49372f;
+  color: #f4e8db;
+}
+.live .section-label { color: #c6a984; }
+.live .gold-line { background: #b99a76; }
+.live .section-copy { color: #e5d5c5; }
+.live-panel {
+  max-width: 620px;
+  margin: 35px auto 0;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid rgba(205,174,139,.5);
+}
+.live-panel .big { font-family: Georgia,serif; font-size: 24px; }
+.news { background: #e6d7c6; }
+.news-card {
+  max-width: 650px;
+  margin: auto;
+  padding: 25px;
+  border-top: 1px solid #bda58c;
+  border-bottom: 1px solid #bda58c;
+  text-align: center;
+  font-size: 13px;
+}
+.community {
+  background: #f1e7da;
+}
+.community-card {
+  max-width: 650px;
+  margin: auto;
+  background: #49372f;
+  color: #f4e8db;
+  padding: 38px 24px;
+  text-align: center;
+}
+.community-card h3 {
+  font-family: "Yu Mincho", serif;
+  font-weight: 400;
+  font-size: 23px;
+  letter-spacing: .12em;
+}
+.community-card p { font-size: 13px; color: #e4d2c0; }
+footer {
+  background: #30231e;
+  color: #d8c4ae;
+  text-align: center;
+  padding: 35px 15px;
+}
+footer .footer-mark { font-size: 24px; }
+footer p { font-family: Georgia,serif; font-size: 10px; letter-spacing: .2em; }
+footer small { font-size: 10px; color: #ad9783; }
+@media(max-width:600px) {
+  header { padding: 13px 15px; flex-wrap: wrap; }
+  .logo { font-size: 11px; }
+  nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 10px; }
+  .hero { min-height: 540px; padding: 70px 18px; }
+  section { padding: 65px 20px; }
+  h2 { font-size: 24px; }
+}
+</style>
 </head>
 <body>
-    <div class="card">
-        <h1>🌸🍡 Natsumi Mitarashi Fan Site 🫖</h1>
-        <p>TikTok Creator Natsumi Mitarashi の非公式ファンコミュニティサイトへようこそ！</p>
-        <p>配信の感想や応援メッセージをシェアしていこう！</p>
+
+<header>
+  <div class="logo">NATSUMI MITARASHI</div>
+  <nav>
+    <a href="#about">なつみについて</a>
+    <a href="#live">配信について</a>
+    <a href="#news">お知らせ</a>
+    <a href="#community">みんなの居場所</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">OFFICIAL FAN SITE</div>
+      <div class="emblem">🌸🍡🫖</div>
+      <h1>みたらし なつみ</h1>
+      <div class="subtitle">NATSUMI MITARASHI</div>
+      <div class="gold-line"></div>
+      <div class="welcome">ようこそ。</div>
+      <div class="intro">
+        ここは、なつみとみんながつながる場所。<br>
+        今日も、あなたのおかえりを待っています。
+      </div>
+      <a class="button" href="#about">なつみのことを知る</a>
     </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="section-label">ABOUT NATSUMI</div>
+      <h2>なつみについて</h2>
+      <div class="section-copy">
+        はじめましての人も、いつものみんなも。<br>
+        ここで出会えたご縁を大切に。<br>
+        笑ったり、おしゃべりしたり、<br>
+        一緒に楽しい時間を過ごせたらうれしいです。
+      </div>
+      <div class="about-panel">
+        <p>みたらし なつみ 🌸🍡🫖</p>
+        <p>みんなと一緒に、少しずつ思い出を重ねていく場所。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="live" id="live">
+    <div class="section-inner">
+      <div class="section-label">TIKTOK LIVE</div>
+      <h2>配信について</h2>
+      <div class="gold-line"></div>
+      <div class="section-copy">
+        おしゃべりも、笑い声も、真剣な挑戦も。<br>
+        みんなで作る時間を大切にしています。<br>
+        初めての方も、気軽に遊びに来てね。
+      </div>
+      <div class="live-panel">
+        <div class="big">ただいま、って入室してね。</div>
+        <p>初見さんも大歓迎。あなたのおかえりを待っています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="news" id="news">
+    <div class="section-inner">
+      <div class="section-label">INFORMATION</div>
+      <h2>お知らせ</h2>
+      <div class="news-card">
+        新しいお知らせやイベント情報は、こちらで紹介していきます。<br>
+        どうぞ楽しみにしていてね。
+      </div>
+    </div>
+  </section>
+
+  <section class="community" id="community">
+    <div class="section-inner">
+      <div class="section-label">OUR COMMUNITY</div>
+      <h2>みんなの居場所</h2>
+      <div class="community-card">
+        <div class="emblem">🌸🍡🫖</div>
+        <h3>初めましても、おかえりも。</h3>
+        <p>
+          誰かが来てくれること。<br>
+          また会いに来てくれること。<br>
+          そのひとつひとつが、うれしい。
+        </p>
+        <p>ここが、みんなにとって<br>安心できる場所になりますように。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-mark">🌸🍡🫖</div>
+  <p>NATSUMI MITARASHI</p>
+  <small>© 2026 NATSUMI MITARASHI FAN SITE</small>
+</footer>
+
 </body>
 </html>
