@@ -4,333 +4,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#49372f">
-<title>みたらしなつみ｜公式ファンサイト</title>
-<meta name="description" content="みたらしなつみの公式ファンサイト。ここは、なつみとみんながつながる場所。">
+<title>みたらし なつみ｜Official Fan Site</title>
 <style>
-:root {
-  --brown: #49372f;
-  --deep: #30231e;
-  --mocha: #70574a;
-  --gold: #b99a76;
-  --cream: #f1e7da;
-  --beige: #e6d7c6;
-  --text: #49372f;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--text);
-  font-family: "Noto Sans JP", "Yu Gothic", sans-serif;
-  line-height: 1.9;
-  letter-spacing: .06em;
-}
-a { color: inherit; text-decoration: none; }
-header {
-  background: var(--deep);
-  color: #f5eadd;
-  padding: 17px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid rgba(213,183,148,.3);
-}
-.logo {
-  font-family: Georgia, serif;
-  font-size: 13px;
-  letter-spacing: .13em;
-  white-space: nowrap;
-}
-nav {
-  display: flex;
-  gap: 22px;
-  font-size: 11px;
-  color: #e4d2c0;
-}
-nav a:hover { color: #d5b794; }
-.hero {
-  min-height: 590px;
-  padding: 85px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #f8eee2;
-  background:
-    radial-gradient(ellipse at 50% 35%, #806555 0%, transparent 55%),
-    linear-gradient(145deg, #574238, #30231e 75%);
-  position: relative;
-  overflow: hidden;
-}
-.hero:before, .hero:after {
-  content: "";
-  position: absolute;
-  width: 230px;
-  height: 230px;
-  border: 1px solid rgba(220,190,155,.18);
-  border-radius: 50%;
-}
-.hero:before { top: -100px; left: -90px; }
-.hero:after { bottom: -130px; right: -80px; }
-.hero-inner { position: relative; z-index: 1; }
-.eyebrow {
-  font-family: Georgia, serif;
-  font-size: 11px;
-  letter-spacing: .3em;
-  color: #d8b995;
-}
-.emblem {
-  font-size: 37px;
-  margin: 25px 0 12px;
-}
-.hero h1 {
-  font-family: Georgia, "Yu Mincho", serif;
-  font-weight: 400;
-  font-size: clamp(29px, 7vw, 48px);
-  letter-spacing: .13em;
-  margin: 0;
-}
-.hero .subtitle {
-  color: #ddc8b2;
-  font-family: Georgia, serif;
-  font-size: 12px;
-  letter-spacing: .25em;
-  margin-top: 12px;
-}
-.hero .welcome {
-  margin: 38px 0 8px;
-  font-family: "Yu Mincho", serif;
-  font-size: 23px;
-  letter-spacing: .16em;
-}
-.hero .intro {
-  font-size: 13px;
-  color: #e5d5c5;
-}
-.gold-line {
-  width: 55px;
-  height: 1px;
-  background: var(--gold);
-  margin: 24px auto;
-}
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 11px 28px;
-  border: 1px solid #c6a984;
-  color: #f5eadd;
-  font-size: 12px;
-  letter-spacing: .12em;
-  transition: .25s;
-}
-.button:hover {
-  background: #c6a984;
-  color: #30231e;
-}
-section { padding: 78px 22px; }
-.section-inner {
-  max-width: 850px;
-  margin: auto;
-}
-.section-label {
-  text-align: center;
-  color: #a48668;
-  font-family: Georgia, serif;
-  font-size: 11px;
-  letter-spacing: .25em;
-}
-h2 {
-  text-align: center;
-  font-family: "Yu Mincho", serif;
-  font-weight: 400;
-  font-size: 27px;
-  letter-spacing: .15em;
-  margin: 5px 0 30px;
-}
-.section-copy {
-  text-align: center;
-  font-size: 14px;
-  line-height: 2.3;
-  max-width: 620px;
-  margin: auto;
-}
-.about {
-  background: #eee3d6;
-}
-.about-panel {
-  margin: 35px auto 0;
-  max-width: 650px;
-  padding: 30px 25px;
-  border: 1px solid #d4c1ac;
-  text-align: center;
-  background: rgba(255,255,255,.18);
-}
-.about-panel p { margin: 0; font-size: 13px; }
-.live {
-  background: #49372f;
-  color: #f4e8db;
-}
-.live .section-label { color: #c6a984; }
-.live .gold-line { background: #b99a76; }
-.live .section-copy { color: #e5d5c5; }
-.live-panel {
-  max-width: 620px;
-  margin: 35px auto 0;
-  padding: 28px;
-  text-align: center;
-  border: 1px solid rgba(205,174,139,.5);
-}
-.live-panel .big { font-family: Georgia,serif; font-size: 24px; }
-.news { background: #e6d7c6; }
-.news-card {
-  max-width: 650px;
-  margin: auto;
-  padding: 25px;
-  border-top: 1px solid #bda58c;
-  border-bottom: 1px solid #bda58c;
-  text-align: center;
-  font-size: 13px;
-}
-.community {
-  background: #f1e7da;
-}
-.community-card {
-  max-width: 650px;
-  margin: auto;
-  background: #49372f;
-  color: #f4e8db;
-  padding: 38px 24px;
-  text-align: center;
-}
-.community-card h3 {
-  font-family: "Yu Mincho", serif;
-  font-weight: 400;
-  font-size: 23px;
-  letter-spacing: .12em;
-}
-.community-card p { font-size: 13px; color: #e4d2c0; }
-footer {
-  background: #30231e;
-  color: #d8c4ae;
-  text-align: center;
-  padding: 35px 15px;
-}
-footer .footer-mark { font-size: 24px; }
-footer p { font-family: Georgia,serif; font-size: 10px; letter-spacing: .2em; }
-footer small { font-size: 10px; color: #ad9783; }
-@media(max-width:600px) {
-  header { padding: 13px 15px; flex-wrap: wrap; }
-  .logo { font-size: 11px; }
-  nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 10px; }
-  .hero { min-height: 540px; padding: 70px 18px; }
-  section { padding: 65px 20px; }
-  h2 { font-size: 24px; }
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap');
+:root{--pink:#ff4fa3;--pale:#ffc1e1;--bg:#09060c;--white:#fff3fa}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--white);background:radial-gradient(ellipse at 50% 15%,#39112f 0%,transparent 40%),radial-gradient(ellipse at 10% 60%,#241027 0%,transparent 35%),var(--bg);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#ff9bd1 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-size:47px 47px,83px 83px;background-position:0 0,20px 30px;z-index:-1}
+a{color:inherit;text-decoration:none}
+header{position:absolute;top:0;left:0;right:0;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.logo{font-family:'Zen Old Mincho',serif;letter-spacing:.12em;font-size:17px;color:var(--pale)}
+nav{display:flex;gap:20px;font-size:11px;letter-spacing:.1em}
+nav a{opacity:.8}
+nav a:hover{color:var(--pink)}
+.hero{min-height:730px;padding:150px 20px 100px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:390px;height:390px;border:1px solid #ff4fa344;border-radius:50%;box-shadow:0 0 70px #ff168c33,inset 0 0 70px #ff168c22}
+.hero:after{content:"🦋";position:absolute;top:19%;right:12%;font-size:55px;filter:drop-shadow(0 0 15px #ff4fa3);transform:rotate(20deg);opacity:.8}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{color:var(--pale);font-size:11px;letter-spacing:.35em;margin-bottom:24px}
+.hero h1{font-family:'Zen Old Mincho',serif;font-size:clamp(42px,10vw,76px);line-height:1.3;letter-spacing:.08em;margin:0;text-shadow:0 0 18px #ff168c88,0 0 45px #ff168c55}
+.hero h1 span{display:block;font-size:.38em;letter-spacing:.3em;color:var(--pale);margin-top:14px}
+.hero-mark{margin-top:27px;font-size:25px;letter-spacing:.2em;filter:drop-shadow(0 0 10px #ff4fa3)}
+.hero-copy{margin:28px auto 0;font-size:13px;line-height:2.2;letter-spacing:.12em;color:#f7d9eb}
+.hero-button{display:inline-block;margin-top:32px;padding:13px 34px;border:1px solid var(--pink);border-radius:40px;color:white;font-size:12px;letter-spacing:.15em;background:linear-gradient(100deg,#ff168c33,#ff4fa311);box-shadow:0 0 22px #ff168c44}
+section{max-width:900px;margin:auto;padding:85px 24px}
+.section-title{text-align:center;margin-bottom:42px}
+.section-title small{color:var(--pink);letter-spacing:.35em;font-size:10px}
+.section-title h2{font-family:'Zen Old Mincho',serif;font-size:29px;font-weight:500;letter-spacing:.15em;margin:10px 0}
+.section-title .line{width:55px;height:1px;background:var(--pink);margin:17px auto 0;box-shadow:0 0 10px var(--pink)}
+.panel{background:linear-gradient(135deg,#241020dd,#100a13ee);border:1px solid #ff4fa344;border-radius:18px;padding:30px;box-shadow:0 0 35px #ff168c12}
+.profile-name{color:var(--pale);font-family:'Zen Old Mincho',serif;font-size:25px;text-align:center;letter-spacing:.15em}
+.profile-text{font-size:13px;line-height:2.3;color:#f3dce9;text-align:center;white-space:pre-line}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.info-card{padding:25px 18px;border:1px solid #ff4fa344;border-radius:14px;background:#1a0d1cbb;text-align:center}
+.info-card .symbol{font-size:28px}
+.info-card h3{font-size:14px;color:var(--pale);letter-spacing:.12em}
+.info-card p{font-size:12px;line-height:2;color:#e9cbdc}
+.schedule{text-align:center;line-height:2.4;font-size:14px}
+.schedule strong{color:var(--pale)}
+.message{text-align:center;font-family:'Zen Old Mincho',serif;font-size:17px;line-height:2.5;letter-spacing:.08em;color:#ffe0f0}
+.social{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.social a{padding:12px 25px;border:1px solid var(--pink);border-radius:30px;font-size:12px;color:var(--pale);box-shadow:0 0 15px #ff168c22}
+footer{text-align:center;padding:45px 15px;border-top:1px solid #ff4fa333;color:#b98ba8;font-size:10px;letter-spacing:.15em}
+footer .marks{font-size:21px;margin-bottom:12px}
+@media(max-width:600px){header{padding:18px 5%}nav{gap:10px;font-size:9px}.logo{font-size:14px}.hero{min-height:680px}.hero:before{width:290px;height:290px}.hero:after{right:5%;top:15%;font-size:40px}section{padding:65px 18px}.panel{padding:24px 17px}.info-grid{gap:10px}.info-card{padding:20px 10px}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="logo">NATSUMI MITARASHI</div>
-  <nav>
-    <a href="#about">なつみについて</a>
-    <a href="#live">配信について</a>
-    <a href="#news">お知らせ</a>
-    <a href="#community">みんなの居場所</a>
-  </nav>
+<div class="logo">NATSUMI</div>
+<nav><a href="#about">ABOUT</a><a href="#live">LIVE</a><a href="#message">MESSAGE</a></nav>
 </header>
-
 <main>
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">OFFICIAL FAN SITE</div>
-      <div class="emblem">🌸🍡🫖</div>
-      <h1>みたらし なつみ</h1>
-      <div class="subtitle">NATSUMI MITARASHI</div>
-      <div class="gold-line"></div>
-      <div class="welcome">ようこそ。</div>
-      <div class="intro">
-        ここは、なつみとみんながつながる場所。<br>
-        今日も、あなたのおかえりを待っています。
-      </div>
-      <a class="button" href="#about">なつみのことを知る</a>
-    </div>
-  </div>
+<div class="hero">
+<div class="hero-inner">
+<div class="eyebrow">OFFICIAL FAN SITE</div>
+<h1>みたらし なつみ<span>NATSUMI MITARASHI</span></h1>
+<div class="hero-mark">🌸🍡🫖</div>
+<p class="hero-copy">ここに来れば、いつだって「おかえり」。<br>あなたと一緒に作る、特別な居場所。</p>
+<a class="hero-button" href="#about">DISCOVER MY WORLD</a>
+</div>
+</div>
 
-  <section class="about" id="about">
-    <div class="section-inner">
-      <div class="section-label">ABOUT NATSUMI</div>
-      <h2>なつみについて</h2>
-      <div class="section-copy">
-        はじめましての人も、いつものみんなも。<br>
-        ここで出会えたご縁を大切に。<br>
-        笑ったり、おしゃべりしたり、<br>
-        一緒に楽しい時間を過ごせたらうれしいです。
-      </div>
-      <div class="about-panel">
-        <p>みたらし なつみ 🌸🍡🫖</p>
-        <p>みんなと一緒に、少しずつ思い出を重ねていく場所。</p>
-      </div>
-    </div>
-  </section>
+<!-- ★★★ ここからプロフィール ★★★ -->
+<section id="about">
+<div class="section-title"><small>WHO IS NATSUMI?</small><h2>なつみについて</h2><div class="line"></div></div>
+<div class="panel">
+<div class="profile-name">みたらし なつみ</div>
+<p class="profile-text">TikTok LIVEを中心に活動中。
 
-  <section class="live" id="live">
-    <div class="section-inner">
-      <div class="section-label">TIKTOK LIVE</div>
-      <h2>配信について</h2>
-      <div class="gold-line"></div>
-      <div class="section-copy">
-        おしゃべりも、笑い声も、真剣な挑戦も。<br>
-        みんなで作る時間を大切にしています。<br>
-        初めての方も、気軽に遊びに来てね。
-      </div>
-      <div class="live-panel">
-        <div class="big">ただいま、って入室してね。</div>
-        <p>初見さんも大歓迎。あなたのおかえりを待っています。</p>
-      </div>
-    </div>
-  </section>
+おしゃべりしたり、笑ったり、
+ときには本気で挑戦したり。
 
-  <section class="news" id="news">
-    <div class="section-inner">
-      <div class="section-label">INFORMATION</div>
-      <h2>お知らせ</h2>
-      <div class="news-card">
-        新しいお知らせやイベント情報は、こちらで紹介していきます。<br>
-        どうぞ楽しみにしていてね。
-      </div>
-    </div>
-  </section>
+初めましての人も、いつものみんなも、
+自然体でいられる場所を目指しています。
 
-  <section class="community" id="community">
-    <div class="section-inner">
-      <div class="section-label">OUR COMMUNITY</div>
-      <h2>みんなの居場所</h2>
-      <div class="community-card">
-        <div class="emblem">🌸🍡🫖</div>
-        <h3>初めましても、おかえりも。</h3>
-        <p>
-          誰かが来てくれること。<br>
-          また会いに来てくれること。<br>
-          そのひとつひとつが、うれしい。
-        </p>
-        <p>ここが、みんなにとって<br>安心できる場所になりますように。</p>
-      </div>
-    </div>
-  </section>
+🌸🍡🫖</p>
+</div>
+</section>
+<!-- ★★★ プロフィールここまで ★★★ -->
+
+<!-- ★★★ ここから配信について ★★★ -->
+<section id="live">
+<div class="section-title"><small>MY LIVE</small><h2>配信について</h2><div class="line"></div></div>
+<div class="info-grid">
+<div class="info-card"><div class="symbol">🌸</div><h3>雑談</h3><p>日常のことから何気ない話まで。みんなで楽しくおしゃべり。</p></div>
+<div class="info-card"><div class="symbol">⚔️</div><h3>バトル</h3><p>みんなで力を合わせて挑戦！一緒に盛り上がろう。</p></div>
+<div class="info-card"><div class="symbol">🦋</div><h3>初見さん歓迎</h3><p>初めましてでも大丈夫。気軽にコメントしてね。</p></div>
+<div class="info-card"><div class="symbol">🫖</div><h3>団結枠</h3><p>それぞれの応援が集まって、みんなで作る団結枠。</p></div>
+</div>
+</section>
+<!-- ★★★ 配信についてここまで ★★★ -->
+
+<!-- ★★★ ここから配信スケジュール ★★★ -->
+<section>
+<div class="section-title"><small>STREAMING SCHEDULE</small><h2>配信スケジュール</h2><div class="line"></div></div>
+<div class="panel schedule"><strong>配信時間</strong><br>最新の配信予定はTikTokでお知らせします。<br><span style="color:#dba9c8;font-size:12px;">※予定は変更になる場合があります</span></div>
+</section>
+<!-- ★★★ 配信スケジュールここまで ★★★ -->
+
+<!-- ★★★ ここからメッセージ ★★★ -->
+<section id="message">
+<div class="section-title"><small>FROM NATSUMI</small><h2>みんなへ</h2><div class="line"></div></div>
+<div class="panel message">何気ない毎日も、<br>ここに来れば少し楽しくなる。<br><br>そんな場所を、みんなと一緒に。<br><br>今日も「ただいま」って遊びに来てね。<br>🌸🍡🫖</div>
+</section>
+<!-- ★★★ メッセージここまで ★★★ -->
+
+<!-- ★★★ ここからSNSリンク ★★★ -->
+<section>
+<div class="section-title"><small>FOLLOW ME</small><h2>会いに来てね</h2><div class="line"></div></div>
+<div class="social"><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok LIVE</a><a href="#" target="_blank" rel="noopener">SNS</a></div>
+</section>
+<!-- ★★★ SNSリンクここまで ★★★ -->
 </main>
-
-<footer>
-  <div class="footer-mark">🌸🍡🫖</div>
-  <p>NATSUMI MITARASHI</p>
-  <small>© 2026 NATSUMI MITARASHI FAN SITE</small>
-</footer>
-
+<footer><div class="marks">🌸🍡🫖</div>M I T A R A S H I&nbsp; N A T S U M I<p>© NATSUMI FAN SITE</p></footer>
 </body>
 </html>
