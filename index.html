@@ -141,13 +141,32 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 <script>
 async function signup() {
-  document.getElementById('auth-message').textContent = '登録処理を開始しました';
-  const { error } = await supabase.auth.signUp({
-    email: document.getElementById('email').value,
-    password: document.getElementById('password').value
-  });
-  document.getElementById('auth-message').textContent =
-    error ? error.message : '確認メールを確認してね！';
+  const message = document.getElementById('auth-message');
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+
+  if (!email || !password) {
+    message.textContent = 'メールアドレスとパスワードを入力してね';
+    return;
+  }
+
+  message.textContent = '登録処理中...';
+
+  try {
+    const { data, error } = await supabase.auth.signUp({
+      email: email,
+      password: password
+    });
+
+    if (error) {
+      message.textContent = 'エラー：' + error.message;
+      return;
+    }
+
+    message.textContent = '登録できたよ！確認メールを確認してね！';
+  } catch (error) {
+    message.textContent = '通信エラー：' + error.message;
+  }
 }
 
 async function login() {
