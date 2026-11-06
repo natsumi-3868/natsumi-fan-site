@@ -123,7 +123,8 @@ footer .marks{font-size:21px;margin-bottom:12px}
 <script>
 const SUPABASE_URL = 'https://yxlrtiuxfzcsjbuaaelr.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_sOebMjYCOEpP8ZDSqnTihw_xTBfKl_H';
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const { createClient } = window.supabase;
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 </script>
   <section id="account">
   <div class="section-title">
