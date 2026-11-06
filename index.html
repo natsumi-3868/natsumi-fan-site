@@ -120,13 +120,7 @@ footer .marks{font-size:21px;margin-bottom:12px}
 </main>
 <footer><div class="marks">🌸🍡🫖</div>M I T A R A S H I&nbsp; N A T S U M I<p>© NATSUMI FAN SITE</p></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-const SUPABASE_URL = 'https://yxlrtiuxfzcsjbuaaelr.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_sOebMjYCOEpP8ZDSqnTihw_xTBfKl_H';
-const { createClient } = window.supabase;
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-</script>
-  <section id="account">
+<section id="account">
   <div class="section-title">
     <small>MEMBER</small>
     <h2>リスナーログイン</h2>
@@ -134,14 +128,21 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
   <div class="panel">
     <input id="email" type="email" placeholder="メールアドレス">
     <input id="password" type="password" placeholder="パスワード">
-    <button onclick="login()">ログイン</button>
     <button onclick="signup()">新規登録</button>
+    <button onclick="login()">ログイン</button>
     <p id="auth-message"></p>
   </div>
 </section>
 
-<script>
-async function signup() {
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+const supabaseClient = createClient(
+  'https://yxlrtiuxfzcsjbuaaelr.supabase.co',
+  'sb_publishable_sOebMjYCOEpP8ZDSqnTihw_xTBfKl_H'
+);
+
+window.signup = async function() {
   const message = document.getElementById('auth-message');
   const email = document.getElementById('email').value.trim();
   const password = document.getElementById('password').value;
@@ -154,30 +155,27 @@ async function signup() {
   message.textContent = '登録処理中...';
 
   try {
-    const { data, error } = await supabase.auth.signUp({
-      email: email,
-      password: password
-    });
-
-    if (error) {
-      message.textContent = 'エラー：' + error.message;
-      return;
-    }
-
-    message.textContent = '登録できたよ！確認メールを確認してね！';
+    const { error } = await supabaseClient.auth.signUp({ email, password });
+    message.textContent = error ? 'エラー：' + error.message : '登録できたよ！';
   } catch (error) {
     message.textContent = '通信エラー：' + error.message;
   }
-}
+};
 
-async function login() {
-  const { error } = await supabase.auth.signInWithPassword({
-    email: document.getElementById('email').value,
-    password: document.getElementById('password').value
-  });
-  document.getElementById('auth-message').textContent =
-    error ? error.message : 'ログインしました！';
-}
+window.login = async function() {
+  const message = document.getElementById('auth-message');
+
+  try {
+    const { error } = await supabaseClient.auth.signInWithPassword({
+      email: document.getElementById('email').value.trim(),
+      password: document.getElementById('password').value
+    });
+
+    message.textContent = error ? 'エラー：' + error.message : 'ログインしました！';
+  } catch (error) {
+    message.textContent = '通信エラー：' + error.message;
+  }
+};
 </script>
 </body>
 </html>
