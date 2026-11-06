@@ -1,181 +1,210 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b090d">
 <title>みたらし なつみ｜Official Fan Site</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Old+Mincho:wght@500;700&display=swap');
-:root{--pink:#ff4fa3;--pale:#ffc1e1;--bg:#09060c;--white:#fff3fa}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;color:var(--white);background:radial-gradient(ellipse at 50% 15%,#39112f 0%,transparent 40%),radial-gradient(ellipse at 10% 60%,#241027 0%,transparent 35%),var(--bg);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#ff9bd1 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-size:47px 47px,83px 83px;background-position:0 0,20px 30px;z-index:-1}
-a{color:inherit;text-decoration:none}
-header{position:absolute;top:0;left:0;right:0;padding:22px 6%;display:flex;justify-content:space-between;align-items:center;z-index:5}
-.logo{font-family:'Zen Old Mincho',serif;letter-spacing:.12em;font-size:17px;color:var(--pale)}
-nav{display:flex;gap:20px;font-size:11px;letter-spacing:.1em}
-nav a{opacity:.8}
-nav a:hover{color:var(--pink)}
-.hero{min-height:730px;padding:150px 20px 100px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:390px;height:390px;border:1px solid #ff4fa344;border-radius:50%;box-shadow:0 0 70px #ff168c33,inset 0 0 70px #ff168c22}
-.hero:after{content:"🦋";position:absolute;top:19%;right:12%;font-size:55px;filter:drop-shadow(0 0 15px #ff4fa3);transform:rotate(20deg);opacity:.8}
-.hero-inner{position:relative;z-index:1}
-.eyebrow{color:var(--pale);font-size:11px;letter-spacing:.35em;margin-bottom:24px}
-.hero h1{font-family:'Zen Old Mincho',serif;font-size:clamp(42px,10vw,76px);line-height:1.3;letter-spacing:.08em;margin:0;text-shadow:0 0 18px #ff168c88,0 0 45px #ff168c55}
-.hero h1 span{display:block;font-size:.38em;letter-spacing:.3em;color:var(--pale);margin-top:14px}
-.hero-mark{margin-top:27px;font-size:25px;letter-spacing:.2em;filter:drop-shadow(0 0 10px #ff4fa3)}
-.hero-copy{margin:28px auto 0;font-size:13px;line-height:2.2;letter-spacing:.12em;color:#f7d9eb}
-.hero-button{display:inline-block;margin-top:32px;padding:13px 34px;border:1px solid var(--pink);border-radius:40px;color:white;font-size:12px;letter-spacing:.15em;background:linear-gradient(100deg,#ff168c33,#ff4fa311);box-shadow:0 0 22px #ff168c44}
-section{max-width:900px;margin:auto;padding:85px 24px}
-.section-title{text-align:center;margin-bottom:42px}
-.section-title small{color:var(--pink);letter-spacing:.35em;font-size:10px}
-.section-title h2{font-family:'Zen Old Mincho',serif;font-size:29px;font-weight:500;letter-spacing:.15em;margin:10px 0}
-.section-title .line{width:55px;height:1px;background:var(--pink);margin:17px auto 0;box-shadow:0 0 10px var(--pink)}
-.panel{background:linear-gradient(135deg,#241020dd,#100a13ee);border:1px solid #ff4fa344;border-radius:18px;padding:30px;box-shadow:0 0 35px #ff168c12}
-.profile-name{color:var(--pale);font-family:'Zen Old Mincho',serif;font-size:25px;text-align:center;letter-spacing:.15em}
-.profile-text{font-size:13px;line-height:2.3;color:#f3dce9;text-align:center;white-space:pre-line}
-.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.info-card{padding:25px 18px;border:1px solid #ff4fa344;border-radius:14px;background:#1a0d1cbb;text-align:center}
-.info-card .symbol{font-size:28px}
-.info-card h3{font-size:14px;color:var(--pale);letter-spacing:.12em}
-.info-card p{font-size:12px;line-height:2;color:#e9cbdc}
-.schedule{text-align:center;line-height:2.4;font-size:14px}
-.schedule strong{color:var(--pale)}
-.message{text-align:center;font-family:'Zen Old Mincho',serif;font-size:17px;line-height:2.5;letter-spacing:.08em;color:#ffe0f0}
-.social{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-.social a{padding:12px 25px;border:1px solid var(--pink);border-radius:30px;font-size:12px;color:var(--pale);box-shadow:0 0 15px #ff168c22}
-footer{text-align:center;padding:45px 15px;border-top:1px solid #ff4fa333;color:#b98ba8;font-size:10px;letter-spacing:.15em}
-footer .marks{font-size:21px;margin-bottom:12px}
-@media(max-width:600px){header{padding:18px 5%}nav{gap:10px;font-size:9px}.logo{font-size:14px}.hero{min-height:680px}.hero:before{width:290px;height:290px}.hero:after{right:5%;top:15%;font-size:40px}section{padding:65px 18px}.panel{padding:24px 17px}.info-grid{gap:10px}.info-card{padding:20px 10px}}
+:root{--bg:#0b090d;--panel:#17121a;--panel2:#211824;--pink:#f28ab5;--pink2:#bd5e8b;--text:#fff7fb;--muted:#c6b8c2;--line:#392b39;--good:#8ed6ad;--bad:#ff9d9d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#291727 0,#0b090d 58%);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;line-height:1.65}
+.wrap{width:min(100% - 28px,980px);margin:auto}.hero{padding:58px 0 36px;text-align:center}.mark{font-size:25px;letter-spacing:5px}.eyebrow{color:var(--pink);letter-spacing:.18em;font-size:12px}.hero h1{font-size:clamp(30px,7vw,54px);margin:8px 0 4px;letter-spacing:.06em}.hero p{color:var(--muted);margin:8px auto;max-width:620px}
+nav{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:22px 0}a{color:var(--pink)}nav a,.btn{border:1px solid var(--line);border-radius:999px;padding:8px 15px;color:var(--text);text-decoration:none;background:#1a141d}
+section.panel{background:linear-gradient(145deg,#1c1620,#120f15);border:1px solid var(--line);border-radius:20px;padding:22px;margin:18px 0;box-shadow:0 12px 35px #0004}
+h2{font-size:20px;margin:0 0 14px;color:#ffd5e6}h3{margin:0 0 8px;font-size:16px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.tile{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:15px}
+label{display:block;font-size:13px;color:var(--muted);margin:10px 0 5px}input,textarea,select{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #554154;background:#0f0c12;color:var(--text);font:inherit}textarea{min-height:90px;resize:vertical}
+button{border:0;border-radius:10px;background:linear-gradient(120deg,var(--pink2),#e58bb2);color:#180d15;padding:11px 16px;font-weight:700;font-size:14px;cursor:pointer;margin:7px 6px 0 0}button.secondary{background:#332536;color:var(--text);border:1px solid #60485c}button.danger{background:#6d303b;color:white}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:1}.hidden{display:none!important}.status{padding:10px 12px;border-radius:10px;background:#241b27;color:var(--muted);margin:12px 0;white-space:pre-wrap}.status.good{color:var(--good)}.status.bad{color:var(--bad)}
+.item{border-bottom:1px solid var(--line);padding:12px 0}.item:last-child{border:0}.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--pink);font-size:12px}
+footer{text-align:center;color:var(--muted);padding:30px 0 45px;font-size:12px}
+@media(max-width:560px){section.panel{padding:17px}.hero{padding-top:40px}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">NATSUMI</div>
-<nav><a href="#about">ABOUT</a><a href="#live">LIVE</a><a href="#message">MESSAGE</a></nav>
+<header class="hero wrap">
+  <div class="mark">🌸 🍡 🫖</div>
+  <div class="eyebrow">OFFICIAL FAN SITE</div>
+  <h1>みたらし なつみ</h1>
+  <p>TikTok LIVEを中心に活動中。おしゃべりしたり、笑ったり、ときには本気で挑戦したり。初めましての人も、いつものみんなも、自然体でいられる場所。</p>
+  <nav><a href="#about">なつみについて</a><a href="#live">LIVE</a><a href="#schedule">配信予定</a><a href="#account">メンバー入口</a></nav>
 </header>
-<main>
-<div class="hero">
-<div class="hero-inner">
-<div class="eyebrow">OFFICIAL FAN SITE</div>
-<h1>みたらし なつみ<span>NATSUMI MITARASHI</span></h1>
-<div class="hero-mark">🌸🍡🫖</div>
-<p class="hero-copy">ここに来れば、いつだって「おかえり」。<br>あなたと一緒に作る、特別な居場所。</p>
-<a class="hero-button" href="#about">DISCOVER MY WORLD</a>
+<main class="wrap">
+<section class="panel" id="about"><h2>なつみについて</h2><p>ここは、みんなが「ただいま」と帰ってこられる場所。ゆっくりお話ししながら、一緒に楽しい時間を作っていこうね。🌸🍡🫖</p></section>
+<section class="panel" id="live"><h2>LIVEについて</h2><div class="grid">
+<div class="tile"><h3>雑談枠</h3><p class="muted">日々のことを話したり、みんなの話を聞いたり。</p></div>
+<div class="tile"><h3>バトル枠</h3><p class="muted">みんなで力を合わせて挑戦。</p></div>
+<div class="tile"><h3>初見さん大歓迎</h3><p class="muted">初めましても、いつものみんなも大歓迎。</p></div>
+<div class="tile"><h3>団結枠</h3><p class="muted">みんなで同じ目標に向かって楽しむ時間。</p></div>
+</div></section>
+<section class="panel" id="schedule"><h2>配信スケジュール</h2><div id="publicSchedules" class="muted">配信予定を読み込み中…</div></section>
+<section class="panel" id="announcements"><h2>お知らせ</h2><div id="publicAnnouncements" class="muted">お知らせを読み込み中…</div></section>
+<section class="panel" id="account">
+<h2>メンバー入口</h2><p class="muted">アカウントを作成・ログインすると、自分のプロフィールを確認・編集できます。</p>
+<div id="authArea">
+<div class="grid">
+<div class="tile"><h3>新規登録</h3><label for="signupEmail">メールアドレス</label><input id="signupEmail" type="email" autocomplete="email"><label for="signupPassword">パスワード（6文字以上）</label><input id="signupPassword" type="password" autocomplete="new-password"><button id="signupBtn">新規登録</button></div>
+<div class="tile"><h3>ログイン</h3><label for="loginEmail">メールアドレス</label><input id="loginEmail" type="email" autocomplete="username"><label for="loginPassword">パスワード</label><input id="loginPassword" type="password" autocomplete="current-password"><button id="loginBtn">ログイン</button></div>
+</div></div>
+<div id="authMessage" class="status" aria-live="polite">ログインしていません。</div>
+<div id="memberArea" class="hidden">
+<div class="row"><strong id="signedInAs"></strong><button class="secondary" id="logoutBtn">ログアウト</button></div>
+<div class="tile">
+<h3>プロフィール</h3>
+<label for="profileName">表示名</label><input id="profileName" maxlength="40">
+<label for="profileAvatar">アイコン画像URL（任意）</label><input id="profileAvatar" type="url" placeholder="https://...">
+<label for="profileBirthday">誕生日（非公開）</label><input id="profileBirthday" type="date">
+<label for="profileBio">自己紹介</label><textarea id="profileBio" maxlength="500"></textarea>
+<button id="saveProfileBtn">プロフィールを保存</button>
+<div id="approvalNote" class="muted"></div>
 </div>
 </div>
-
-<!-- ★★★ ここからプロフィール ★★★ -->
-<section id="about">
-<div class="section-title"><small>WHO IS NATSUMI?</small><h2>なつみについて</h2><div class="line"></div></div>
-<div class="panel">
-<div class="profile-name">みたらし なつみ</div>
-<p class="profile-text">TikTok LIVEを中心に活動中。
-
-おしゃべりしたり、笑ったり、
-ときには本気で挑戦したり。
-
-初めましての人も、いつものみんなも、
-自然体でいられる場所を目指しています。
-
-🌸🍡🫖</p>
+</section>
+<section class="panel hidden" id="adminArea">
+<h2>管理者ページ <span class="tag">ADMIN</span></h2>
+<p class="muted">この画面は admins テーブルに登録されたアカウントだけに表示されます。</p>
+<div class="tile"><h3>リスナー管理</h3><div id="listenersList">読み込み中…</div></div>
+<div class="grid">
+<div class="tile"><h3>お知らせを追加</h3><label for="newAnnouncementTitle">タイトル</label><input id="newAnnouncementTitle"><label for="newAnnouncementBody">本文</label><textarea id="newAnnouncementBody"></textarea><button id="addAnnouncementBtn">公開する</button></div>
+<div class="tile"><h3>配信予定を追加</h3><label for="newScheduleTitle">タイトル</label><input id="newScheduleTitle" placeholder="雑談LIVE"><label for="newScheduleDate">日時</label><input id="newScheduleDate" type="datetime-local"><label for="newScheduleDetails">内容</label><textarea id="newScheduleDetails"></textarea><button id="addScheduleBtn">予定を追加</button></div>
 </div>
-</section>
-<!-- ★★★ プロフィールここまで ★★★ -->
-
-<!-- ★★★ ここから配信について ★★★ -->
-<section id="live">
-<div class="section-title"><small>MY LIVE</small><h2>配信について</h2><div class="line"></div></div>
-<div class="info-grid">
-<div class="info-card"><div class="symbol">🌸</div><h3>雑談</h3><p>日常のことから何気ない話まで。みんなで楽しくおしゃべり。</p></div>
-<div class="info-card"><div class="symbol">⚔️</div><h3>バトル</h3><p>みんなで力を合わせて挑戦！一緒に盛り上がろう。</p></div>
-<div class="info-card"><div class="symbol">🦋</div><h3>初見さん歓迎</h3><p>初めましてでも大丈夫。気軽にコメントしてね。</p></div>
-<div class="info-card"><div class="symbol">🫖</div><h3>団結枠</h3><p>それぞれの応援が集まって、みんなで作る団結枠。</p></div>
+<div class="tile"><h3>応援・参加記録を追加</h3>
+<label for="recordListener">リスナー</label><select id="recordListener"></select>
+<label for="recordType">記録の種類</label><select id="recordType"><option value="monthly">月間応援</option><option value="lifetime">累計応援</option><option value="event">イベント応援</option><option value="attendance">配信参加</option><option value="member_level">メンバーLv履歴</option></select>
+<div id="amountWrap"><label for="recordAmount">応援ポイント（数値）</label><input id="recordAmount" type="number" min="0" step="1" value="0"></div>
+<label for="recordDate">記録日</label><input id="recordDate" type="date">
+<label for="recordEvent">イベント名・メモ</label><input id="recordEvent">
+<button id="addRecordBtn">記録を保存</button>
 </div>
+<div class="tile"><h3>ランキング</h3><label for="rankingType">表示するランキング</label><select id="rankingType"><option value="monthly">月間応援</option><option value="lifetime">累計応援</option><option value="event">イベント応援</option><option value="attendance">配信参加</option></select><div id="rankingList" class="muted">記録を読み込み中…</div></div>
 </section>
-<!-- ★★★ 配信についてここまで ★★★ -->
-
-<!-- ★★★ ここから配信スケジュール ★★★ -->
-<section>
-<div class="section-title"><small>STREAMING SCHEDULE</small><h2>配信スケジュール</h2><div class="line"></div></div>
-<div class="panel schedule"><strong>配信時間</strong><br>最新の配信予定はTikTokでお知らせします。<br><span style="color:#dba9c8;font-size:12px;">※予定は変更になる場合があります</span></div>
-</section>
-<!-- ★★★ 配信スケジュールここまで ★★★ -->
-
-<!-- ★★★ ここからメッセージ ★★★ -->
-<section id="message">
-<div class="section-title"><small>FROM NATSUMI</small><h2>みんなへ</h2><div class="line"></div></div>
-<div class="panel message">何気ない毎日も、<br>ここに来れば少し楽しくなる。<br><br>そんな場所を、みんなと一緒に。<br><br>今日も「ただいま」って遊びに来てね。<br>🌸🍡🫖</div>
-</section>
-<!-- ★★★ メッセージここまで ★★★ -->
-
-<!-- ★★★ ここからSNSリンク ★★★ -->
-<section>
-<div class="section-title"><small>FOLLOW ME</small><h2>会いに来てね</h2><div class="line"></div></div>
-<div class="social"><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok LIVE</a><a href="#" target="_blank" rel="noopener">SNS</a></div>
-</section>
-<!-- ★★★ SNSリンクここまで ★★★ -->
 </main>
-<footer><div class="marks">🌸🍡🫖</div>M I T A R A S H I&nbsp; N A T S U M I<p>© NATSUMI FAN SITE</p></footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<section id="account">
-  <div class="section-title">
-    <small>MEMBER</small>
-    <h2>リスナーログイン</h2>
-  </div>
-  <div class="panel">
-    <input id="email" type="email" placeholder="メールアドレス">
-    <input id="password" type="password" placeholder="パスワード">
-    <button onclick="signup()">新規登録</button>
-    <button onclick="login()">ログイン</button>
-    <p id="auth-message"></p>
-  </div>
-</section>
-
+<footer>🌸🍡🫖 みたらし なつみ Official Fan Site</footer>
 <script type="module">
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const supabaseClient = createClient(
-  'https://yxlrtiuxfzcsjbuaaelr.supabase.co',
-  'sb_publishable_sOebMjYCOEpP8ZDSqnTihw_xTBfKl_H'
-);
+const SUPABASE_URL = "https://bhwzxrxatnxngyvuejzk.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_W_xrfQ5Y_FAgjLxlprL05w_4ktDmFsD";
+const db = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const $ = (id) => document.getElementById(id);
+let currentUser = null;
+let isAdmin = false;
+let listenersCache = [];
 
-window.signup = async function() {
-  const message = document.getElementById('auth-message');
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value;
+function message(text, kind="") { const el=$("authMessage"); el.textContent=text; el.className="status "+kind; }
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function dateText(value) { if(!value) return ""; const d=new Date(value); return Number.isNaN(d.getTime())?String(value):d.toLocaleString("ja-JP",{dateStyle:"medium",timeStyle: value.includes("T")?"short":undefined}); }
+function fail(prefix,error){ console.error(prefix,error); message(prefix+"："+(error?.message||"不明なエラー"),"bad"); }
 
-  if (!email || !password) {
-    message.textContent = 'メールアドレスとパスワードを入力してね';
-    return;
+async function loadPublic(){
+  const [s,a]=await Promise.all([
+    db.from("schedules").select("id,title,starts_at,details").eq("published",true).order("starts_at",{ascending:true}),
+    db.from("announcements").select("id,title,body,created_at").eq("published",true).order("created_at",{ascending:false})
+  ]);
+  $("publicSchedules").innerHTML=s.error?'<p>配信予定はまだありません。</p>':(s.data.length?s.data.map(x=>`<div class="item"><strong>${esc(x.title)}</strong><div class="muted">${esc(dateText(x.starts_at))}</div><div>${esc(x.details)}</div></div>`).join(""):'<p>現在公開中の予定はありません。</p>');
+  $("publicAnnouncements").innerHTML=a.error?'<p>お知らせはまだありません。</p>':(a.data.length?a.data.map(x=>`<div class="item"><strong>${esc(x.title)}</strong><div>${esc(x.body)}</div><small class="muted">${esc(dateText(x.created_at))}</small></div>`).join(""):'<p>現在公開中のお知らせはありません。</p>');
+}
+async function getProfile(){
+  const {data,error}=await db.from("listeners").select("id,display_name,avatar_url,birthday,bio,approved,member_level,first_visit").eq("user_id",currentUser.id).maybeSingle();
+  if(error) throw error;
+  if(!data){
+    const {error:insertError}=await db.from("listeners").insert({user_id:currentUser.id,display_name:currentUser.email?.split("@")[0]||"新しいメンバー",approved:false});
+    if(insertError && !String(insertError.message).includes("duplicate")) throw insertError;
+    return getProfile();
   }
-
-  message.textContent = '登録処理中...';
-
-  try {
-    const { error } = await supabaseClient.auth.signUp({ email, password });
-    message.textContent = error ? 'エラー：' + error.message : '登録できたよ！';
-  } catch (error) {
-    message.textContent = '通信エラー：' + error.message;
-  }
-};
-
-window.login = async function() {
-  const message = document.getElementById('auth-message');
-
-  try {
-    const { error } = await supabaseClient.auth.signInWithPassword({
-      email: document.getElementById('email').value.trim(),
-      password: document.getElementById('password').value
-    });
-
-    message.textContent = error ? 'エラー：' + error.message : 'ログインしました！';
-  } catch (error) {
-    message.textContent = '通信エラー：' + error.message;
-  }
-};
+  $("profileName").value=data.display_name||"";
+  $("profileAvatar").value=data.avatar_url||"";
+  $("profileBirthday").value=data.birthday||"";
+  $("profileBio").value=data.bio||"";
+  $("approvalNote").textContent=data.approved?"メンバー登録が承認されています。":"登録確認中です。承認後にメンバー情報が反映されます。";
+  return data;
+}
+async function checkAdmin(){
+  const {data,error}=await db.from("admins").select("user_id").eq("user_id",currentUser.id).maybeSingle();
+  if(error) throw error;
+  isAdmin=!!data;
+  $("adminArea").classList.toggle("hidden",!isAdmin);
+  if(isAdmin) await loadAdmin();
+}
+async function refreshSession(session){
+  currentUser=session?.user||null;
+  $("authArea").classList.toggle("hidden",!!currentUser);
+  $("memberArea").classList.toggle("hidden",!currentUser);
+  $("adminArea").classList.add("hidden");
+  if(!currentUser){$("signedInAs").textContent="";isAdmin=false;message("ログインしていません。");return;}
+  $("signedInAs").textContent=currentUser.email||"ログイン中";
+  try{await getProfile();await checkAdmin();message("ログインしました。","good");}
+  catch(e){fail("プロフィールの読み込みに失敗しました",e);}
+}
+async function loadAdmin(){
+  const {data,error}=await db.from("listeners").select("id,display_name,first_visit,birthday,member_level,approved,user_id").order("created_at",{ascending:false});
+  if(error) throw error;
+  listenersCache=data||[];
+  $("listenersList").innerHTML=listenersCache.length?listenersCache.map(x=>`<div class="item"><strong>${esc(x.display_name||"名前未設定")}</strong> <span class="tag">${x.approved?"承認済み":"未承認"}</span><div class="muted">初見日：${esc(x.first_visit||"未登録")} ／ Lv：${esc(x.member_level??"未登録")} ／ 誕生日：${esc(x.birthday||"未登録")}</div><div class="row"><button class="secondary" data-approve="${x.id}" data-value="${!x.approved}">${x.approved?"承認を取り消す":"承認する"}</button><input aria-label="メンバーLv" type="number" min="0" data-level="${x.id}" value="${esc(x.member_level??"")}"><button class="secondary" data-savelevel="${x.id}">Lv保存</button></div></div>`).join(""):'<p>登録者はいません。</p>';
+  $("recordListener").innerHTML=listenersCache.map(x=>`<option value="${x.id}">${esc(x.display_name||"名前未設定")}</option>`).join("");
+  await loadRanking();
+}
+async function loadRanking(){
+ const type=$("rankingType").value;
+ if(type==="attendance"){
+   const {data,error}=await db.from("attendance_records").select("listener_id").order("attended_on",{ascending:false});
+   if(error){$("rankingList").textContent=error.message;return;}
+   const counts={};(data||[]).forEach(r=>counts[r.listener_id]=(counts[r.listener_id]||0)+1);
+   const rows=Object.entries(counts).map(([id,n])=>({id:Number(id),n})).sort((a,b)=>b.n-a.n);
+   $("rankingList").innerHTML=rows.map((r,i)=>`<div class="item">${i+1}位　${esc(listenersCache.find(x=>x.id===r.id)?.display_name||"不明")}　<strong>${r.n}回</strong></div>`).join("")||"記録はありません。";
+   return;
+ }
+ const {data,error}=await db.from("support_records").select("listener_id,amount,record_type");
+ if(error){$("rankingList").textContent=error.message;return;}
+ const totals={};(data||[]).filter(r=>r.record_type===type).forEach(r=>totals[r.listener_id]=(totals[r.listener_id]||0)+Number(r.amount||0));
+ const rows=Object.entries(totals).map(([id,n])=>({id:Number(id),n})).sort((a,b)=>b.n-a.n);
+ $("rankingList").innerHTML=rows.map((r,i)=>`<div class="item">${i+1}位　${esc(listenersCache.find(x=>x.id===r.id)?.display_name||"不明")}　<strong>${r.n.toLocaleString("ja-JP")}</strong></div>`).join("")||"記録はありません。";
+}
+$("signupBtn").addEventListener("click",async()=>{
+ const email=$("signupEmail").value.trim(),password=$("signupPassword").value;
+ if(!email||password.length<6){message("メールアドレスと6文字以上のパスワードを入力してね。","bad");return;}
+ const {data,error}=await db.auth.signUp({email,password});
+ if(error){fail("新規登録に失敗しました",error);return;}
+ if(data.session) await refreshSession(data.session); else message("登録を受け付けました。メール確認が必要な設定の場合は受信メールを確認してね。","good");
+});
+$("loginBtn").addEventListener("click",async()=>{
+ const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
+ if(error){fail("ログインに失敗しました",error);return;} await refreshSession(data.session);
+});
+$("logoutBtn").addEventListener("click",async()=>{const {error}=await db.auth.signOut();if(error){fail("ログアウトに失敗しました",error);return;}await refreshSession(null);});
+$("saveProfileBtn").addEventListener("click",async()=>{
+ const payload={display_name:$("profileName").value.trim(),avatar_url:$("profileAvatar").value.trim()||null,birthday:$("profileBirthday").value||null,bio:$("profileBio").value.trim()};
+ const {error}=await db.from("listeners").update(payload).eq("user_id",currentUser.id);
+ if(error){fail("プロフィールを保存できませんでした",error);return;}message("プロフィールを保存しました。","good");
+});
+$("addAnnouncementBtn").addEventListener("click",async()=>{
+ const {error}=await db.from("announcements").insert({title:$("newAnnouncementTitle").value.trim(),body:$("newAnnouncementBody").value.trim(),published:true});
+ if(error){fail("お知らせを追加できませんでした",error);return;}message("お知らせを追加しました。","good");await loadPublic();
+});
+$("addScheduleBtn").addEventListener("click",async()=>{
+ const raw=$("newScheduleDate").value;
+ const {error}=await db.from("schedules").insert({title:$("newScheduleTitle").value.trim(),starts_at:raw?new Date(raw).toISOString():null,details:$("newScheduleDetails").value.trim(),published:true});
+ if(error){fail("配信予定を追加できませんでした",error);return;}message("配信予定を追加しました。","good");await loadPublic();
+});
+$("addRecordBtn").addEventListener("click",async()=>{
+ const listener_id=Number($("recordListener").value),record_type=$("recordType").value,recorded_on=$("recordDate").value||new Date().toISOString().slice(0,10),note=$("recordEvent").value.trim();
+ if(!listener_id){message("先にリスナーを登録してね。","bad");return;}
+ let result;
+ if(record_type==="attendance") result=await db.from("attendance_records").insert({listener_id,attended_on:recorded_on,note});
+ else if(record_type==="member_level") result=await db.from("member_level_history").insert({listener_id,member_level:Number($("recordAmount").value),recorded_on,note});
+ else result=await db.from("support_records").insert({listener_id,record_type,amount:Number($("recordAmount").value)||0,recorded_on,note});
+ if(result.error){fail("記録を保存できませんでした",result.error);return;}message("記録を保存しました。","good");await loadRanking();
+});
+$("rankingType").addEventListener("change",loadRanking);
+$("recordType").addEventListener("change",()=>{$("amountWrap").classList.toggle("hidden",$("recordType").value==="attendance");});
+$("listenersList").addEventListener("click",async(e)=>{
+ const a=e.target.closest("[data-approve]"),l=e.target.closest("[data-savelevel]");
+ if(a){const id=Number(a.dataset.approve),value=a.dataset.value==="true";const {error}=await db.rpc("admin_set_listener_approval",{p_listener_id:id,p_approved:value});if(error){fail("承認状態を変更できませんでした",error);return;}message("承認状態を更新しました。","good");await loadAdmin();}
+ if(l){const id=Number(l.dataset.savelevel),field=document.querySelector(`[data-level="${id}"]`),value=field.value===""?null:Number(field.value);const {error}=await db.rpc("admin_set_listener_level",{p_listener_id:id,p_member_level:value});if(error){fail("メンバーLvを更新できませんでした",error);return;}message("メンバーLvを更新しました。","good");await loadAdmin();}
+});
+await loadPublic();
+const {data:{session}}=await db.auth.getSession();
+await refreshSession(session);
+db.auth.onAuthStateChange((_event,session)=>{setTimeout(()=>refreshSession(session),0);});
 </script>
 </body>
 </html>
