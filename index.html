@@ -141,6 +141,7 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 <script>
 async function signup() {
+  alert('新規登録ボタンは反応してるよ');
   const { error } = await supabase.auth.signUp({
     email: document.getElementById('email').value,
     password: document.getElementById('password').value
